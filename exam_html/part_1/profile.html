@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>User Profile</title>
+</head>
+<script>
+    function toggleMenu() {
+        document.querySelector('.sidebar').classList.toggle('show');
+    }
+</script>
+<body>
+
+    <div class="container">
+
+
+        <aside class="sidebar">
+
+            <h2>Company</h2>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        <img src="./img/nav/dashboard_gray.svg"
+                             alt="Dashboard"
+                             class="menu-icon icon-default">
+
+                        <img src="./img/nav/dashboard_white.svg"
+                             alt="Dashboard"
+                             class="menu-icon icon-hover">
+
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="profile.html">
+
+                        <img src="./img/nav/account_gray.svg"
+                             alt="User Profile"
+                             class="menu-icon icon-default">
+
+                        <img src="./img/nav/account_white.svg"
+                             alt="User Profile"
+                             class="menu-icon icon-hover">
+
+                        User Profile
+                    </a>
+                </li>
+
+                <li>
+                    <a href="maps.html">
+
+                        <img src="./img/nav/map_gray.svg"
+                             alt="Maps"
+                             class="menu-icon icon-default">
+
+                        <img src="./img/nav/map_white.svg"
+                             alt="Maps"
+                             class="menu-icon icon-hover">
+
+                        Maps
+                    </a>
+                </li>
+
+                <li>
+                    <a href="notifications.html">
+
+                        <img src="./img/nav/notify_gray.svg"
+                             alt="Notifications"
+                             class="menu-icon icon-default">
+
+                        <img src="./img/nav/notify_white.svg"
+                             alt="Notifications"
+                             class="menu-icon icon-hover">
+
+                        Notifications
+                    </a>
+                </li>
+
+                <li>
+                    <a href="support.html">
+
+                        <img src="./img/nav/support_gray.svg"
+                             alt="Support"
+                             class="menu-icon icon-default">
+
+                        <img src="./img/nav/support_white.svg"
+                             alt="Support"
+                             class="menu-icon icon-hover">
+
+                        Support
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+        <main class="content">
+
+
+            <button class="burger" onclick="toggleMenu()">
+                ☰
+                <span>User Profile</span>
+            </button>
+
+            <header>
+                <h1>User Profile</h1>
+            </header>
+
+
+            <section class="profile-section">
+
+        
+
+                <div class="edit-card">
+
+                    <div class="edit-title">
+
+                        <h2>Edit profile</h2>
+
+                        <p>Complete your profile info...</p>
+
+                    </div>
+
+
+                    <form>
+
+            
+
+                        <div class="form-row three">
+
+                            <div class="form-group">
+                                <label>Company</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email">
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row two">
+
+                            <div class="form-group">
+                                <label>First name</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Last name</label>
+                                <input type="text">
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label>Address</label>
+
+                            <input type="text">
+
+                        </div>
+
+
+                
+
+                        <div class="form-row three">
+
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Country</label>
+                                <input type="text">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Postal code</label>
+                                <input type="text">
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label>About me</label>
+
+                            <textarea></textarea>
+
+                        </div>
+
+                        <div class="button-container">
+
+                            <button type="submit">
+                                UPDATE PROFILE
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="user-card">
+
+                    <div class="avatar">
+
+                        <img src="./img/user/avatar.jpg" alt="Profile">
+
+                    </div>
+
+                    <p class="role">
+                        WEB-DEVELOPER
+                    </p>
+
+                    <h2>
+                        John Smith
+                    </h2>
+
+                    <p class="description">
+                        "My credo as a web developer: Ship it now, fix it later
+                        (but hopefully before the client notices). I turn coffee
+                        into clean code, bugs into features, and deadlines into
+                        adrenaline. The web is my canvas, and I paint it with
+                        pixels and JavaScript chaos!"
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <footer>
+
+                <div>
+                    ABOUT&nbsp;&nbsp;&nbsp;
+                    BLOG&nbsp;&nbsp;&nbsp;
+                    LICENSES
+                </div>
+
+                <div>
+                    2025 - made with love ❤
+                </div>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Notifications</title>
+</head>
+<script>
+    function toggleMenu() {
+        document.querySelector('.sidebar').classList.toggle('show');
+    }
+</script>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <h2>Company</h2>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <img src="./img/nav/dashboard_gray.svg"
+                         alt="Dashboard"
+                         class="menu-icon icon-default">
+
+                    <img src="./img/nav/dashboard_white.svg"
+                         alt="Dashboard"
+                         class="menu-icon icon-hover">
+
+                    Dashboard
+                </a>
+            </li>
+
+
+            <li>
+                <a href="profile.html">
+                    <img src="./img/nav/account_gray.svg"
+                         alt="User Profile"
+                         class="menu-icon icon-default">
+
+                    <img src="./img/nav/account_white.svg"
+                         alt="User Profile"
+                         class="menu-icon icon-hover">
+
+                    User Profile
+                </a>
+            </li>
+
+
+            <li>
+                <a href="maps.html">
+                    <img src="./img/nav/map_gray.svg"
+                         alt="Maps"
+                         class="menu-icon icon-default">
+
+                    <img src="./img/nav/map_white.svg"
+                         alt="Maps"
+                         class="menu-icon icon-hover">
+
+                    Maps
+                </a>
+            </li>
+
+
+            <li class="active">
+                <a href="notifications.html">
+
+                    <img src="./img/nav/notify_gray.svg"
+                         alt="Notifications"
+                         class="menu-icon icon-default">
+
+                    <img src="./img/nav/notify_white.svg"
+                         alt="Notifications"
+                         class="menu-icon icon-hover">
+
+                    Notifications
+
+                </a>
+            </li>
+
+
+            <li>
+                <a href="support.html">
+
+                    <img src="./img/nav/support_gray.svg"
+                         alt="Support"
+                         class="menu-icon icon-default">
+
+                    <img src="./img/nav/support_white.svg"
+                         alt="Support"
+                         class="menu-icon icon-hover">
+
+                    Support
+
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+        <main class="content">
+
+
+          <button class="burger" onclick="toggleMenu()">
+    ☰
+     <span>Notifications</span> 
+</button>
+<h1 style="color: #444444;">Notifications</h1>
+
+        <p class="description">
+            In this section, you can manage your notifications.
+            We will only send important information: order updates,
+            service news, and personalized offers.
+        </p>
+
+
+        <div class="filters">
+
+            <button class="filter active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter" data-filter="system">
+                System
+            </button>
+
+            <button class="filter" data-filter="finance">
+                Finance
+            </button>
+
+            <button class="filter" data-filter="task">
+                Tasks
+            </button>
+
+        </div>
+
+
+        
+
+        <div id="notifications">
+
+            <div class="notification-list">
+
+
+           
+
+                <div class="notification"
+                     data-category="system"
+                     data-time="2">
+
+                    <div class="notification-icon system">
+                        ⚙
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Low disk space
+                        </div>
+
+                        <div class="notification-text">
+                            42 of 50 GB used (84%). We recommend clearing the cache.
+                        </div>
+
+                        <span class="time">
+                            2 min ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="finance"
+                     data-time="10">
+
+                    <div class="notification-icon finance">
+                        <img src="./img/notifications/gemini-svg (11).svg" alt="">
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Sales growth
+                        </div>
+
+                        <div class="notification-text">
+                            Today's sales increased by 55% compared to yesterday.
+                        </div>
+
+                        <span class="time">
+                            10 min ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="task"
+                     data-time="30">
+
+                    <div class="notification-icon task">
+                        ✓
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Bug fixed
+                        </div>
+
+                        <div class="notification-text">
+                            Ticket #402 "UI glitches in employee list" has been closed.
+                        </div>
+
+                        <span class="time">
+                            30 min ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="system"
+                     data-time="60">
+
+                    <div class="notification-icon system">
+                        ↻
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            System update
+                        </div>
+
+                        <div class="notification-text">
+                            Version v2.4.1 was successfully installed. View the changelog.
+                        </div>
+
+                        <span class="time">
+                            1 hour ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="finance"
+                     data-time="90">
+
+                    <div class="notification-icon finance">
+                        <img src="./img/notifications/gemini-svg (12).svg" alt="">
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            New payment
+                        </div>
+
+                        <div class="notification-text">
+                            Payment received for invoice #1042 in the amount of UAH 4,500.
+                        </div>
+
+                        <span class="time">
+                            1 hour 30 min ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="task"
+                     data-time="120">
+
+                    <div class="notification-icon task">
+                        <img src="./img/notifications/gemini-svg (13).svg" alt="">
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Task assigned
+                        </div>
+
+                        <div class="notification-text">
+                            The manager added you to the task "Responsive layout development".
+                        </div>
+
+                        <span class="time">
+                            2 hours ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="system"
+                     data-time="180">
+
+                    <div class="notification-icon system">
+                        <img src="./img/notifications/gemini-svg (14).svg" alt="">
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            High CPU usage
+                        </div>
+
+                        <div class="notification-text">
+                            CPU usage exceeded 90% for 5 minutes.
+                        </div>
+
+                        <span class="time">
+                            3 hours ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="finance"
+                     data-time="240">
+
+                    <div class="notification-icon finance">
+                        ✓
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Successful withdrawal
+                        </div>
+
+                        <div class="notification-text">
+                            Automatic withdrawal of funds to card *4481 completed.
+                        </div>
+
+                        <span class="time">
+                            4 hours ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="system"
+                     data-time="300">
+
+                    <div class="notification-icon system">
+                        <img src="./img/notifications/gemini-svg (15).svg" alt="">
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            SSL certificate
+                        </div>
+
+                        <div class="notification-text">
+                            The domain security certificate expires in 7 days.
+                        </div>
+
+                        <span class="time">
+                            5 hours ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="task"
+                     data-time="360">
+
+                    <div class="notification-icon task">
+                        <img src="./img/notifications/gemini-svg (16).svg" alt="">
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Deadline approaching
+                        </div>
+
+                        <div class="notification-text">
+                            2 hours remain until the deadline for the
+                            "Notification Dashboard" project.
+                        </div>
+
+                        <span class="time">
+                            6 hours ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="system"
+                     data-time="1440">
+
+                    <div class="notification-icon system">
+                        ⚠
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Connection lost
+                        </div>
+
+                        <div class="notification-text">
+                            A brief connection failure with node #4.
+                            Connection restored.
+                        </div>
+
+                        <span class="time">
+                            Yesterday
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="finance"
+                     data-time="1500">
+
+                    <div class="notification-icon finance">
+                        !
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Payment failed
+                        </div>
+
+                        <div class="notification-text">
+                            Insufficient funds on the customer's card
+                            to continue the subscription.
+                        </div>
+
+                        <span class="time">
+                            Yesterday
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="task"
+                     data-time="1600">
+
+                    <div class="notification-icon task">
+                        <img src="./img/notifications/gemini-svg (17).svg" alt="">
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            New comment
+                        </div>
+
+                        <div class="notification-text">
+                            Olena left a comment on task #115.
+                        </div>
+
+                        <span class="time">
+                            Yesterday
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="system"
+                     data-time="2880">
+
+                    <div class="notification-icon system">
+                        <img src="./img/notifications/gemini-svg (19).svg" alt="">
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Scheduled maintenance
+                        </div>
+
+                        <div class="notification-text">
+                            The server will be unavailable on August 25
+                            from 02:00 to 04:00.
+                        </div>
+
+                        <span class="time">
+                            2 days ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="finance"
+                     data-time="3000">
+
+                    <div class="notification-icon finance">
+                        ★
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Bonus program
+                        </div>
+
+                        <div class="notification-text">
+                            250 bonus points have been credited
+                            for the referral program.
+                        </div>
+
+                        <span class="time">
+                            2 days ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="task"
+                     data-time="4320">
+
+                    <div class="notification-icon task">
+                        <img src="./img/notifications/gemini-svg (20).svg" alt="">
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Archiving
+                        </div>
+
+                        <div class="notification-text">
+                            The project "Notification section layout"
+                            was successfully archived.
+                        </div>
+
+                        <span class="time">
+                            3 days ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="system"
+                     data-time="8640">
+
+                    <div class="notification-icon system">
+                        🗄
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Database
+                        </div>
+
+                        <div class="notification-text">
+                            Automatic table optimization completed
+                            (1.2 GB freed).
+                        </div>
+
+                        <span class="time">
+                            6 days ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="finance"
+                     data-time="8700">
+
+                    <div class="notification-icon finance">
+                       <img src="./img/notifications/gemini-svg (21).svg" alt="">
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Weekly report
+                        </div>
+
+                        <div class="notification-text">
+                            Financial report for last week generated.
+                            Download PDF.
+                        </div>
+
+                        <span class="time">
+                            6 days ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="notification"
+                     data-category="task"
+                     data-time="8800">
+
+                    <div class="notification-icon task">
+                        ⚠
+                    </div>
+
+                    <div class="notification-content">
+
+                        <div class="notification-title">
+                            Overdue
+                        </div>
+
+                        <div class="notification-text">
+                            The deadline for the task
+                            "Telegram bot setup" passed yesterday.
+                        </div>
+
+                        <span class="time">
+                            6 days ago
+                        </span>
+
+                        <button class="read-button">
+                            Mark as read
+                        </button>
+
+                    </div>
+
+                    <button class="close">
+                        ×
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+ <footer>
+                
+                <div>
+                    ABOUT &nbsp;&nbsp;
+                    BLOG &nbsp;&nbsp;
+                    LICENSES
+                </div>
+                
+                <div>
+                    2025 - made with love ❤
+                </div>
+                
+            </footer>
+
+    </main>
+
+</div>
+
+
+<script>
+
+
+
+    const notificationList =
+        document.querySelector(".notification-list");
+
+    const notifications =
+        Array.from(
+            notificationList.querySelectorAll(".notification")
+        );
+
+
+    function sortNotifications() {
+
+        notifications.sort((a, b) => {
+
+            return Number(a.dataset.time) -
+                   Number(b.dataset.time);
+
+        });
+
+
+        notifications.forEach(notification => {
+
+            notificationList.appendChild(notification);
+
+        });
+
+    }
+
+
+    sortNotifications();
+
+
+
+    const filters =
+        document.querySelectorAll(".filter");
+
+
+    filters.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            filters.forEach(btn => {
+
+                btn.classList.remove("active");
+
+            });
+
+            button.classList.add("active");
+
+
+            const selectedCategory =
+                button.dataset.filter;
+
+
+
+            notifications.forEach(notification => {
+
+                if (
+                    selectedCategory === "all" ||
+                    notification.dataset.category === selectedCategory
+                ) {
+
+                    notification.style.display = "flex";
+
+                } else {
+
+                    notification.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+
+    document.querySelectorAll(".close").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            button.parentElement.remove();
+
+        });
+
+    });
+
+
+
+    document.querySelectorAll(".read-button").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            button.textContent = "Read ✓";
+
+            button.style.background = "#dff2df";
+
+            button.style.color = "#32813a";
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

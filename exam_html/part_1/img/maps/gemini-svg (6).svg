@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Ліве приміщення -->
+  <path d="M2 21h20" />
+  <path d="M4 21V10a1 1 0 0 1 1-1h5v12" />
+  
+  <!-- Вежа головного офісу -->
+  <path d="M10 21V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v17" />
+  
+  <!-- Вікна вежі -->
+  <path d="M13 7h4" />
+  <path d="M13 11h4" />
+  <path d="M13 15h4" />
+  
+  <!-- Вікна прибудови -->
+  <path d="M6 12h2" />
+  <path d="M6 16h2" />
+</svg>

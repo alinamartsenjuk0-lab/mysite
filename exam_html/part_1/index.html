@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Dashboard</title>
+</head>
+<script>
+    function toggleMenu() {
+        document.querySelector('.sidebar').classList.toggle('show');
+    }
+</script>
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            
+            <h2>Company</h2>
+            
+            <ul>
+                
+                <li class="active">
+                    <a href="index.html">
+                        <img src="./img/nav/dashboard_gray.svg" alt="Dashboard" class="menu-icon icon-default">
+                        <img src="./img/nav/dashboard_white.svg" alt="Dashboard" class="menu-icon icon-hover">
+                        Dashboard
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="profile.html">
+                        <img src="./img/nav/account_gray.svg" alt="User Profile" class="menu-icon icon-default">
+                        <img src="./img/nav/account_white.svg" alt="User Profile" class="menu-icon icon-hover">
+                        User Profile
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="maps.html">
+                        <img src="./img/nav/map_gray.svg" alt="Maps" class="menu-icon icon-default">
+                        <img src="./img/nav/map_white.svg" alt="Maps" class="menu-icon icon-hover">
+                        Maps
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="notifications.html">
+                        <img src="./img/nav/notify_gray.svg" alt="Notifications" class="menu-icon icon-default">
+                        <img src="./img/nav/notify_white.svg" alt="Notifications" class="menu-icon icon-hover">
+                        Notifications
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="support.html">
+                        <img src="./img/nav/support_gray.svg" alt="Support" class="menu-icon icon-default">
+                        <img src="./img/nav/support_white.svg" alt="Support" class="menu-icon icon-hover">
+                        Support
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </aside>
+    
+        
+        <main class="content">
+            <button class="burger" onclick="toggleMenu()">
+                ☰ <span>Dashboard</span>
+            </button>
+            
+            <header>
+                <h1>Dashboard</h1>
+            </header>
+            
+            <section class="cards">
+                
+                <div class="card">
+                    <div class="icon green">
+                        <img src="./img/cards/data_white.svg" alt="User" class="menu-icon">
+                    </div>
+                    
+                    <h4>Used Space</h4>
+                    
+                    <h2>40/50 GB</h2>
+                    
+                    <p>
+                        <img src="./img/cards/alert.png" alt="" class="small-icon">
+                        Get more space...
+                    </p>
+                    
+                </div>
+                
+                <div class="card">
+                    
+                    <div class="icon orange">
+                        <img src="./img/cards/shop_white.svg" alt="User" class="menu-icon">
+                    </div>
+                    
+                    <h4>Revenue</h4>
+                    
+                    <h2>$ 34.245</h2>
+                    
+                    <p>
+                        <img src="./img/cards/calendar.png" alt="" class="small-icon">
+                        Last 24 Hours
+                    </p>
+                    
+                </div>
+                
+                <div class="card">
+                    
+                    <div class="icon blue">
+                        <img src="./img/cards/tag_white.svg" alt="User" class="menu-icon">
+                    </div>
+                    
+                    <h4>Fixed Issues</h4>
+                    
+                    <h2>75</h2>
+                    
+                    <p>
+                        <img src="./img/cards/down.png" alt="" class="small-icon">
+                        Tracked from Github
+                    </p>
+                    
+                </div>
+                
+                <div class="card">
+                    
+                    <div class="icon pink">
+                        <img src="./img/cards/paperplane_white.svg" alt="User" class="menu-icon">
+                    </div>
+                    
+                    <h4>Followers</h4>
+                    
+                    <h2>+ 245</h2>
+                    
+                    <p>
+                        <img src="./img/cards/time.png" alt="" class="small-icon">
+                        Just Updated
+                    </p>
+                    
+                </div>
+                
+            </section>
+
+            
+            <section class="charts">
+                
+                <div class="chart">
+                    <div class="chart-color green">
+                        <img src="./img/diagrams/diagram_white.svg" alt="">
+                    </div>
+                    <h3>Daily Sales</h3>
+                    <p>55% increase in today sales.</p>
+                    <div class="clock">
+                        <img src=".\/img/cards/time.png" alt="">
+                        <p>updated 4 minutes ago</p>
+                    </div>
+                </div>
+                
+                <div class="chart">
+                    <div class="chart-color orange">
+                        <img src="./img/diagrams/diagram_white.svg" alt="">
+                    </div>
+                    <h3>Email Subscriptions</h3>
+                    <p>Last Campaign Performance</p>
+                    <div class="clock">
+                        <img src=".\/img/cards/time.png" alt="">
+                        <p>campaign sent 2 days ago</p>
+                    </div>
+                </div>
+                
+                <div class="chart">
+                    <div class="chart-color blue">
+                        <img src="./img/diagrams/diagram_white.svg" alt="">
+                    </div>
+                    <h3>Completed Tasks</h3>
+                    <p>Last Campaign Performance</p>
+                    <div class="clock">
+                        <img src=".\/img/cards/time.png" alt="">
+                        <p>campaign event 2 days ago</p>
+                    </div>
+                </div>
+                
+            </section>
+
+            
+            <section class="bottom">
+                
+                <div class="tasks">
+                    
+                    <div class="title orange">
+                        
+                        <span style="font-size: 18px;">Tasks:</span>
+                        
+                        <span class="task-btn active">
+                            <img src="./img/tables/bug.svg" alt="">
+                            Bugs
+                        </span>
+                        
+                        <span class="task-btn">
+                            <img src="./img/tables/web.svg" alt="">
+                            Website
+                        </span>
+                        
+                        <span class="task-btn">
+                            <img src="./img/tables/cloud.svg" alt="">
+                            Server
+                        </span>
+                        
+                    </div>
+                    
+                    <ul>
+                        
+                        <li>
+                            <input type="checkbox">
+                            
+                            <span class="task-text">
+                                Fix incorrect data synchronization
+                                between sales metrics and user activity logs
+                            </span>
+                            
+                            <div class="task-icons">
+                                <img src="./img/tables/edit.png" alt="">
+                                <img src="./img/tables/remove.png" alt="">
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox">
+                            <span class="task-text">
+                                Resolve Ul glitches in employee list
+                                filtering and sorting features
+                            </span>
+                            <div class="task-icons">
+                                <img src="./img/tables/edit.png" alt="">
+                                <img src="./img/tables/remove.png" alt="">
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox">
+                            <span class="task-text">
+                                Improve responsiveness of social media
+                                analytics charts on mobile devices
+                            </span>
+                            <div class="task-icons">
+                                <img src="./img/tables/edit.png" alt="">
+                                <img src="./img/tables/remove.png" alt="">
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <input type="checkbox">
+                            <span class="task-text">
+                                Address delayed notifications for user
+                                feedback and support requests
+                            </span>
+                            <div class="task-icons">
+                                <img src="./img/tables/edit.png" alt="">
+                                <img src="./img/tables/remove.png" alt="">
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+                
+                <div class="table">
+                    
+                    <div class="title blue">
+                        <div>
+                            <h3>Users Stats</h3> 
+                            <p> New Users Revenue Statistics</p>
+                        </div>
+                    </div>
+                    
+                    <table>
+                        
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Amount (USD)</th>
+                            <th>Country</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td>John Smith</td>
+                            <td>1200</td>
+                            <td>USA</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>Alice Brown</td>
+                            <td>850</td>
+                            <td>UK</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>3</td>
+                            <td>Hiroshi Tanaka</td>
+                            <td>950</td>
+                            <td>Japan</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>4</td>
+                            <td>Mykola Kovalenko</td>
+                            <td>750</td>
+                            <td>Ukraine</td>
+                        </tr>
+                        
+                    </table>
+                    
+                </div>
+                
+            </section>
+            
+            <footer>
+                
+                <div>
+                    ABOUT &nbsp;&nbsp;
+                    BLOG &nbsp;&nbsp;
+                    LICENSES
+                </div>
+                
+                <div>
+                    2025 - made with love ❤
+                </div>
+                
+            </footer>
+            
+        </main>
+        
+    </div>
+</body>
+
+</html>

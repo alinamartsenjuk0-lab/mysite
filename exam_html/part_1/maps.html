@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maps</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<script>
+    function toggleMenu() {
+        document.querySelector('.sidebar').classList.toggle('show');
+    }
+</script>
+<body>
+
+<div class="container">
+    <aside class="sidebar">
+
+        <h2>Company</h2>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    <img src="./img/nav/dashboard_gray.svg"
+                         class="menu-icon icon-default"
+                         alt="Dashboard">
+
+                    <img src="./img/nav/dashboard_white.svg"
+                         class="menu-icon icon-hover"
+                         alt="Dashboard">
+
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+
+                    <img src="./img/nav/account_gray.svg"
+                         class="menu-icon icon-default"
+                         alt="User Profile">
+
+                    <img src="./img/nav/account_white.svg"
+                         class="menu-icon icon-hover"
+                         alt="User Profile">
+
+                    User Profile
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="maps.html">
+
+                    <img src="./img/nav/map_gray.svg"
+                         class="menu-icon icon-default"
+                         alt="Maps">
+
+                    <img src="./img/nav/map_white.svg"
+                         class="menu-icon icon-hover"
+                         alt="Maps">
+
+                    Maps
+                </a>
+            </li>
+
+            <li>
+                <a href="notifications.html">
+
+                    <img src="./img/nav/notify_gray.svg"
+                         class="menu-icon icon-default"
+                         alt="Notifications">
+
+                    <img src="./img/nav/notify_white.svg"
+                         class="menu-icon icon-hover"
+                         alt="Notifications">
+
+                    Notifications
+                </a>
+            </li>
+
+            <li>
+                <a href="support.html">
+
+                    <img src="./img/nav/support_gray.svg"
+                         class="menu-icon icon-default"
+                         alt="Support">
+
+                    <img src="./img/nav/support_white.svg"
+                         class="menu-icon icon-hover"
+                         alt="Support">
+
+                    Support
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+    <main class="content">
+            
+
+            <button class="burger" onclick="toggleMenu()">
+                ☰
+                <span>Maps</span>
+            </button>
+
+        <h1 style="color: #444444;">Maps</h1>
+
+        <p class="map-description"   style=" font-size: 20px; font-weight: 600;">
+            Interactive map of our company's physical offices around the world.
+        </p>
+
+
+    
+        <div class="map-statistics">
+
+            <div class="map-stat-card">
+
+                <div class="stat-icon">
+                    <img src="./img/maps/gemini-svg (6).svg" alt="">
+                </div>
+
+                <div>
+                    <h3>96</h3>
+                    <p>Offices worldwide</p>
+                    <span>in 39 countries</span>
+                </div>
+
+            </div>
+
+
+            <div class="map-stat-card">
+
+                <div class="stat-icon">
+                    <img src="./img/maps/gemini-svg (9).svg" alt="">
+                </div>
+
+                <div>
+                    <h3>4,800+</h3>
+                    <p>Employees</p>
+                    <span>work in our offices</span>
+                </div>
+
+            </div>
+
+
+            <div class="map-stat-card">
+
+                <div class="stat-icon">
+                    <img src="./img/maps/gemini-svg (10).svg" alt="">
+                </div>
+
+                <div>
+                    <h3>39</h3>
+                    <p>Countries</p>
+                    <span>across 6 continents</span>
+                </div>
+
+            </div>
+
+
+            <div class="map-stat-card">
+
+                <div class="stat-icon">◉</div>
+
+                <div>
+                    <h3>24/7</h3>
+                    <p>Global support</p>
+                    <span>our team is always here</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="map"></div> 
+
+
+        
+        <div class="map-info">
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    <img src="./img/maps/gemini-svg (6).svg" alt="">
+                </div>
+
+                <div>
+                    <h3>Our Offices</h3>
+
+                    <p>
+                        We have modern offices in key cities around
+                        the world to stay close to our clients.
+                    </p>
+
+                    <a href="javascript:void(0)" onclick="showInfo('offices')">
+                Learn more →
+            </a>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    <img src="./img/maps/gemini-svg (9).svg" alt="">
+                </div>
+
+                <div>
+                    <h3>Join Our Team</h3>
+
+                    <p>
+                        We are always looking for talented people
+                        who want to grow together with us.
+                    </p>
+
+                    <a href="javascript:void(0)" onclick="showInfo('team')">
+                View vacancies →
+            </a>
+                </div>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">☎</div>
+
+                <div>
+                    <h3>Contact Us</h3>
+
+                    <p>
+                        Find the nearest office or contact our
+                        representative in your region.
+                    </p>
+
+                    <a href="javascript:void(0)" onclick="showInfo('contacts')">
+                Contacts →
+            </a>
+                </div>
+
+            </div>
+
+        </div>
+        
+<div id="info-window" class="info-window">
+
+    <button class="close-info" onclick="closeInfo()">×</button>
+
+    <h2 id="info-title"></h2>
+
+    <p id="info-text"></p>
+
+</div>
+       <footer>
+                
+                <div>
+                    ABOUT &nbsp;&nbsp;
+                    BLOG &nbsp;&nbsp;
+                    LICENSES
+                </div>
+                
+                <div>
+                    2025 - made with love ❤
+                </div>
+                
+            </footer>  
+
+    </main>
+
+</div>
+
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+
+<script src="./js/maps.js"></script>
+
+</body>
+</html>

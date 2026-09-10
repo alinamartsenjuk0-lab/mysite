@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Support</title>
+</head>
+<script>
+    function toggleMenu() {
+        document.querySelector('.sidebar').classList.toggle('show');
+    }
+</script>
+<body>
+     <div class="container">
+        
+        
+        <aside class="sidebar">
+            
+            <h2>Company</h2>
+            
+            <ul>
+                
+                <li>
+                    <a href="index.html">
+                        <img src="./img/nav/dashboard_gray.svg" alt="Dashboard" class="menu-icon icon-default">
+                        <img src="./img/nav/dashboard_white.svg" alt="Dashboard" class="menu-icon icon-hover">
+                        Dashboard
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="profile.html">
+                        <img src="./img/nav/account_gray.svg" alt="User Profile" class="menu-icon icon-default">
+                        <img src="./img/nav/account_white.svg" alt="User Profile" class="menu-icon icon-hover">
+                        User Profile
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="maps.html">
+                        <img src="./img/nav/map_gray.svg" alt="Maps" class="menu-icon icon-default">
+                        <img src="./img/nav/map_white.svg" alt="Maps" class="menu-icon icon-hover">
+                        Maps
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="notifications.html">
+                        <img src="./img/nav/notify_gray.svg" alt="Notifications" class="menu-icon icon-default">
+                        <img src="./img/nav/notify_white.svg" alt="Notifications" class="menu-icon icon-hover">
+                        Notifications
+                    </a>
+                </li>
+                
+                <li class="active">
+                    <a href="support.html">
+                        <img src="./img/nav/support_gray.svg" alt="Support" class="menu-icon icon-default">
+                        <img src="./img/nav/support_white.svg" alt="Support" class="menu-icon icon-hover">
+                        Support
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </aside>
+            <main class="content">
+
+           
+
+            <button class="burger" onclick="toggleMenu()">
+                ☰
+                <span>Support Center</span>
+            </button>
+            <h1 style="color: #444444;">Support Center</h1>
+<div class="sp-wrapper">
+ 
+
+ 
+  <div class="sp-card sp-form-card">
+    <div class="sp-card-header">
+      <h2>Quick Request</h2>
+    </div>
+    
+    <form class="sp-form" onsubmit="event.preventDefault();">
+      <div class="sp-form-row">
+        <div class="sp-form-group">
+          <label for="sp-subject" class="sp-label">Subject</label>
+          <input type="text" id="sp-subject" class="sp-input" placeholder="Briefly describe the issue..." />
+        </div>
+
+        <div class="sp-form-group">
+          <label for="sp-category" class="sp-label">Category</label>
+          <select id="sp-category" class="sp-select">
+            <option value="tech">Bug Report</option>
+            <option value="account">Account Question</option>
+            <option value="billing">Billing & Payments</option>
+          </select>
+        </div>
+
+        <div class="sp-form-group">
+          <label for="sp-priority" class="sp-label">Priority</label>
+          <select id="sp-priority" class="sp-select">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="sp-form-group">
+        <label for="sp-message" class="sp-label">Message</label>
+        <textarea id="sp-message" class="sp-textarea" rows="4" placeholder="Enter a detailed description of your issue..."></textarea>
+      </div>
+
+      <div class="sp-form-footer">
+        <label class="sp-file-upload">
+          <input type="file" hidden />
+          <span class="sp-file-btn">📎 Attach File</span>
+        </label>
+        <button type="submit" class="sp-btn-submit">SUBMIT</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="sp-card sp-faq-card">
+    <div class="sp-faq-header">
+      <h2>Frequently Asked Questions & Knowledge Base</h2>
+    </div>
+
+    <div class="sp-faq-grid">
+      <div class="sp-faq-column">
+        <details class="sp-faq-item">
+          <summary class="sp-faq-question">How do I reset my account password?</summary>
+          <p class="sp-faq-answer">To reset your password, go to the "User Profile" section and click "Change Password" or use the recovery link on the login page.</p>
+        </details>
+
+        <details class="sp-faq-item">
+          <summary class="sp-faq-question">Why are my sales metrics not syncing?</summary>
+          <p class="sp-faq-answer">Data synchronizes every 15 minutes. If you notice a longer delay, please check your API connection status in the settings.</p>
+        </details>
+
+        <details class="sp-faq-item">
+          <summary class="sp-faq-question">Where can I download monthly financial reports?</summary>
+          <p class="sp-faq-answer">All reports are available on the Dashboard page via the export button in the upper right corner of the table.</p>
+        </details>
+
+        <details class="sp-faq-item">
+          <summary class="sp-faq-question">How do I add a new team member?</summary>
+          <p class="sp-faq-answer">Navigate to Account Settings, open the "Team" tab, and send an invitation to the new employee's email address.</p>
+        </details>
+
+        <details class="sp-faq-item">
+          <summary class="sp-faq-question">How do I set up two-factor authentication?</summary>
+          <p class="sp-faq-answer">In your user profile, enable the 2FA toggle switch and scan the QR code using the Google Authenticator app.</p>
+        </details>
+      </div>
+
+      <div class="sp-faq-column">
+        <details class="sp-faq-item">
+          <summary class="sp-faq-question">Trouble logging in with Google?</summary>
+          <p class="sp-faq-answer">Clear your browser cache or ensure that your Google account email matches the one used during registration.</p>
+        </details>
+
+        <details class="sp-faq-item">
+          <summary class="sp-faq-question">How do I change my company name?</summary>
+          <p class="sp-faq-answer">Go to the "User Profile" page, update the value in the "Company" field, and click the "Update Profile" button.</p>
+        </details>
+
+        <details class="sp-faq-item">
+          <summary class="sp-faq-question">CRM System Integration</summary>
+          <p class="sp-faq-answer">Our platform supports integration via Webhooks and REST API. Detailed documentation can be generated in settings.</p>
+        </details>
+
+        <details class="sp-faq-item">
+          <summary class="sp-faq-question">How do I generate a report for a specific period?</summary>
+          <p class="sp-faq-answer">Use the date range filter on the Dashboard page to select your desired timeframe of days or months.</p>
+        </details>
+
+        <details class="sp-faq-item">
+          <summary class="sp-faq-question">Managing notification settings</summary>
+          <p class="sp-faq-answer">In the Notifications section, you can configure the specific types of system and financial alerts you wish to receive.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+              <footer>
+                
+                <div>
+                    ABOUT &nbsp;&nbsp;
+                    BLOG &nbsp;&nbsp;
+                    LICENSES
+                </div>
+                
+                <div>
+                    2025 - made with love ❤
+                </div>
+                
+            </footer>
+</div>
+
+
+
+</body>
+</html>
